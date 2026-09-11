@@ -10,6 +10,7 @@ public class ConversorMedida {
         
         System.out.print("Digite uma medida em metros: ");
         double metros = ler.nextDouble();
+        
         System.out.println(metros + "m equivale a " + (metros*100) + "cm");
 
         ler.close();

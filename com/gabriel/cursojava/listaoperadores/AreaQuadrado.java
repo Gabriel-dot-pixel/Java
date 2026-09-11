@@ -8,13 +8,10 @@ public class AreaQuadrado {
         
         Scanner ler = new Scanner(System.in);
         
-        double lado;
-        double area;
-        
         System.out.print("Digite o lado de um quadrado: ");
-        lado = ler.nextDouble();
+        double lado = ler.nextDouble();
         
-        area = lado * lado;
+        double area = lado * lado;
         
         System.out.println("A area desse quadrado e " + area + " e seu dobro e " + (area*2));
 

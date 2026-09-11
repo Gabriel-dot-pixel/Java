@@ -10,6 +10,7 @@ public class LeitorNumero {
         
         System.out.print("Digite um numero: ");
         int numero = ler.nextInt();
+        
         System.out.println("O numero informado foi " + numero);
 
         ler.close();

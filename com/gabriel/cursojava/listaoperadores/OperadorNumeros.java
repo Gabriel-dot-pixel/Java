@@ -8,16 +8,14 @@ public class OperadorNumeros {
         
         Scanner ler = new Scanner(System.in);
         
-        int num1;
-        int num2;
-        double num3;
-        
         System.out.print("Digite um numero inteiro: ");
-        num1 = ler.nextInt();
+        int num1 = ler.nextInt();
+
         System.out.print("Digite outro numero inteiro: ");
-        num2 = ler.nextInt();
+        int num2 = ler.nextInt();
+        
         System.out.print("Digite um numero real: ");
-        num3 = ler.nextDouble();
+        double num3 = ler.nextDouble();
         
         System.out.println("Produto do dobro do primeiro com metade do segundo: " + ((num1*2)*((double)num2/2)));
         System.out.println("Soma do triplo do primeiro com o terceiro: " + ((num1*3) + num3));

@@ -8,16 +8,13 @@ public class CalculoSalario {
         
         Scanner ler = new Scanner(System.in);
         
-        double salarioHora;
-        int horasMes;
-        
         System.out.print("Digite quanto voce ganha por hora: R$");
-        salarioHora = ler.nextDouble();
+        double valorHora = ler.nextDouble();
         
         System.out.print("Digite quantas horas voce trabalha no mes: ");
-        horasMes = ler.nextInt();
+        int horas = ler.nextInt();
         
-        System.out.println("Voce ganha R$" + (salarioHora*horasMes) + " por mes");
+        System.out.println("Voce ganha R$" + (valorHora*horas) + " por mes");
 
         ler.close();
     }

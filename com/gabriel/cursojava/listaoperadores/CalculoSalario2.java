@@ -8,25 +8,18 @@ public class CalculoSalario2 {
         
         Scanner ler = new Scanner(System.in);
         
-        double salarioHora;
-        int horasMes;
-        double salarioBruto;
-        double INSS;
-        double sindicato;
-        double IR;
-        double salarioLiquido;
-        
         System.out.print("Digite quanto voce ganha por hora: R$");
-        salarioHora = ler.nextDouble();
+        double valorHora = ler.nextDouble();
         
         System.out.print("Digite quantas horas voce trabalha no mes: ");
-        horasMes = ler.nextInt();
+        int horas = ler.nextInt();
         
-        salarioBruto = salarioHora * horasMes;
-        INSS = salarioBruto * 0.08;
-        sindicato = salarioBruto * 0.05;
-        IR = salarioBruto * 0.11;
-        salarioLiquido = salarioBruto - INSS - sindicato - IR;
+        double salarioBruto = valorHora * horas;
+        double INSS = salarioBruto * 0.08;
+        double sindicato = salarioBruto * 0.05;
+        double IR = salarioBruto * 0.11;
+        double descontos = INSS + sindicato + IR;
+        double salarioLiquido = salarioBruto - descontos;
         
         System.out.println("-------------------------------------------");
         System.out.println("Salario bruto: R$" + salarioBruto);
@@ -36,6 +29,8 @@ public class CalculoSalario2 {
         System.out.println("Sindicato: R$" + sindicato);
         
         System.out.println("Imposto de Renda: R$" + IR);
+
+        System.out.println("Total Descontado: R$" + descontos);
         
         System.out.println("Salario Liquido: R$" + salarioLiquido);
         System.out.println("-------------------------------------------");
