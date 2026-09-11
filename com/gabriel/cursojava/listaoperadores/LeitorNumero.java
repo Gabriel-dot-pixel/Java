@@ -8,10 +8,8 @@ public class LeitorNumero {
         
         Scanner ler = new Scanner(System.in);
         
-        int numero;
-        
         System.out.print("Digite um numero: ");
-        numero = ler.nextInt();
+        int numero = ler.nextInt();
         System.out.println("O numero informado foi " + numero);
 
         ler.close();

@@ -8,14 +8,11 @@ public class SomaDoisNumeros {
         
         Scanner ler = new Scanner(System.in);
         
-        int num1;
-        int num2;
-        
         System.out.print("Digite o primeiro numero: ");
-        num1 = ler.nextInt();
+        int num1 = ler.nextInt();
         
         System.out.print("Digite o segundo numero: ");
-        num2 = ler.nextInt();
+        int num2 = ler.nextInt();
         
         System.out.println(num1 + " + " + num2 + " = " + (num1+num2));
 

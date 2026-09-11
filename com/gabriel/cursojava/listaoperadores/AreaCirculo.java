@@ -8,13 +8,12 @@ public class AreaCirculo {
         
         Scanner ler = new Scanner(System.in);
         
-        double raio;
-        double pi = Math.PI;
-        
         System.out.print("Digite o raio de um circulo: ");
-        raio = ler.nextDouble();
+        double raio = ler.nextDouble();
+
+        double area = Math.PI * (raio*raio);
         
-        System.out.println("A area desse ciruclo e " + (pi*(raio*raio)));
+        System.out.println("A area desse ciruclo e " + area);
 
         ler.close();
     }

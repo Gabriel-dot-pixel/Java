@@ -8,23 +8,19 @@ public class Media {
         
         Scanner ler = new Scanner(System.in);
         
-        double nota1;
-        double nota2;
-        double nota3;
-        double nota4;
         double media;
         
         System.out.print("Digite a nota 1: ");
-        nota1 = ler.nextDouble();
+        double nota1 = ler.nextDouble();
         
         System.out.print("Digite a nota 2: ");
-        nota2 = ler.nextDouble();
+        double nota2 = ler.nextDouble();
         
         System.out.print("Digite a nota 3: ");
-        nota3 = ler.nextDouble();
+        double nota3 = ler.nextDouble();
         
         System.out.print("Digite a nota 4: ");
-        nota4 = ler.nextDouble();
+        double nota4 = ler.nextDouble();
         
         media = (nota1 + nota2 + nota3 + nota4) / 4;
         
