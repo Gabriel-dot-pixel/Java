@@ -9,20 +9,14 @@ public class LeitorSexo {
         Scanner ler = new Scanner(System.in);
 
         System.out.print("Digite o seu sexo (M - Masculino | F - Feminino): ");
-        String sexo = ler.next();
+        String sexo = ler.nextLine();
 
-        switch (sexo) {
-            case "M":
-                System.out.println("Masculino");
-                break;
-
-            case "F":
-                System.out.println("Feminino");
-                break;
-        
-            default:
-                System.out.println("Sexo inválido!");
-                break;
+        if (sexo.equals("M")) {
+            System.out.println("Masculino");
+        } else if (sexo.equals("F")) {
+            System.out.println("Feminino");
+        } else {
+            System.out.println("Sexo inválido!");
         }
 
         ler.close();
