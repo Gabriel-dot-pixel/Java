@@ -8,8 +8,6 @@ public class Media {
         
         Scanner ler = new Scanner(System.in);
         
-        double media;
-        
         System.out.print("Digite a nota 1: ");
         double nota1 = ler.nextDouble();
         
@@ -22,9 +20,9 @@ public class Media {
         System.out.print("Digite a nota 4: ");
         double nota4 = ler.nextDouble();
         
-        media = (nota1 + nota2 + nota3 + nota4) / 4;
+        double media = (nota1 + nota2 + nota3 + nota4) / 4;
         
-        System.out.println("A media de todas as notas notas e " + media);
+        System.out.println("A media de todas as notas e " + media);
 
         ler.close();
     }
