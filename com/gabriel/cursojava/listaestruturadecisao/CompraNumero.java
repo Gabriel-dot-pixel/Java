@@ -18,8 +18,6 @@ public class CompraNumero {
             System.out.println("O primeiro número é maior");
         } else if (num2 > num1) {
             System.out.println("O segundo número é maior");
-        } else {
-            System.out.println("Os dois números são iguais");
         }
 
         ler.close();

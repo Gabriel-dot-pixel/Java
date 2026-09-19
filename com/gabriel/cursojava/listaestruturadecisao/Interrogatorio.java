@@ -8,6 +8,55 @@ public class Interrogatorio {
         
         Scanner ler = new Scanner(System.in);
 
-        
+        int contSim = 0;
+
+        System.out.print("Telefonou para a vítima? S - Sim e N - Não: ");
+        String resposta = ler.nextLine();
+
+        if (resposta.equals("S")) {
+            contSim++;
+        }
+
+        System.out.print("Esteve no local do crime? S - Sim e N - Não: ");
+        resposta = ler.nextLine();
+
+        if (resposta.equals("S")) {
+            contSim++;
+        }
+
+        System.out.print("Mora perto da vítima? S - Sim e N - Não: ");
+        resposta = ler.nextLine();
+
+        if (resposta.equals("S")) {
+            contSim++;
+        }
+
+        System.out.print("Devia para a vítima? S - Sim e N - Não: ");
+        resposta = ler.nextLine();
+
+        if (resposta.equals("S")) {
+            contSim++;
+        }
+
+        System.out.print("Ja trabalhou com a vítima? S - Sim e N - Não: ");
+        resposta = ler.nextLine();
+
+        if (resposta.equals("S")) {
+            contSim++;
+        }
+
+        System.out.print("Sua classificação: ");
+
+        if (contSim == 2) {
+            System.out.println("Suspeito(a)");
+        } else if (contSim == 3 || contSim == 4) {
+            System.out.println("Cúmplice");
+        } else if (contSim == 5) {
+            System.out.println("Assassino(a)");
+        } else {
+            System.out.println("Inocente");
+        }
+
+        ler.close();
     }
 }
