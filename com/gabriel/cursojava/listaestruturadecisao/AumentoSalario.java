@@ -8,7 +8,6 @@ public class AumentoSalario {
         
         Scanner ler = new Scanner(System.in);
 
-        double novoSalario;
         double aumento;
 
         System.out.print("Digite o seu salário atual: R$");
@@ -19,21 +18,19 @@ public class AumentoSalario {
 
         if (salarioAtual <= 280.0) {
             System.out.println("Percentual de aumento: 20%");
-            novoSalario = salarioAtual * 1.20;
             aumento = salarioAtual * 0.20;
         } else if (salarioAtual <= 700.0) {
             System.out.println("Percentual de aumento: 15%");
-            novoSalario = salarioAtual * 1.15;
             aumento = salarioAtual * 0.15;
         } else if (salarioAtual <= 1500.0) {
             System.out.println("Percentual de aumento: 10%");
-            novoSalario = salarioAtual * 1.10;
             aumento = salarioAtual * 0.10;
         } else {
             System.out.println("Percentual de aumento: 5%");
-            novoSalario = salarioAtual * 1.05;
             aumento = salarioAtual * 0.05;
         }
+
+        double novoSalario = salarioAtual + aumento;
 
         System.out.println("Valor do aumento: R$" + aumento);
         System.out.println("Salário após o aumento: R$" + novoSalario);

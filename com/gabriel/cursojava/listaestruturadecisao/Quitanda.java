@@ -29,10 +29,9 @@ public class Quitanda {
             precoMaca = quiloMaca * 1.5;
         }
 
-        double quiloTotal = quiloMorango + quiloMaca;
         double precoTotal = precoMorango + precoMaca;
 
-        if (quiloTotal > 8.0 || precoTotal > 25.0) {
+        if ((quiloMorango + quiloMaca) > 8.0 || precoTotal > 25.0) {
             precoTotal = precoTotal - (precoTotal * 0.10);
         }
 

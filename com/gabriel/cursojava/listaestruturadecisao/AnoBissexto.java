@@ -11,16 +11,8 @@ public class AnoBissexto {
         System.out.print("Digite um ano: ");
         int ano = ler.nextInt();
 
-        if (ano % 4 == 0) {
-            if (ano % 100 == 0) {
-                if (ano % 400 == 0) {
-                    System.out.println(ano + " é ano bissexto");
-                } else {
-                    System.out.println(ano + " não é ano bissexto");
-                }
-            } else {
-                System.out.println(ano + " não é ano bissexto");
-            }
+        if ((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0) {
+            System.out.println(ano + " é ano bissexto");
         } else {
             System.out.println(ano + " não é ano bissexto");
         }
