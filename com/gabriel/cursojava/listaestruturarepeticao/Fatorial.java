@@ -13,15 +13,15 @@ public class Fatorial {
 
         int f = 1;
 
-        System.out.print(num + "! = ");
+        System.out.print(num + "!=");
 
         for (int i=num; i>0; i--) {
             System.out.print(i);
 
             if (i > 1) {
-                System.out.print(" x ");
+                System.out.print(".");
             } else {
-                System.out.print(" = ");
+                System.out.print("=");
             }
 
             f *= i;
