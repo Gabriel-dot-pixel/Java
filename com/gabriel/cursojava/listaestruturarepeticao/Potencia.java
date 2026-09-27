@@ -2,22 +2,25 @@ package com.gabriel.cursojava.listaestruturarepeticao;
 
 import java.util.Scanner;
 
-public class Intervalo {
+public class Potencia {
 
     public static void main(String[] args) {
         
         Scanner ler = new Scanner(System.in);
 
+        int resultado = 1;
+
         System.out.print("Digite o primeiro número: ");
-        int num1 = ler.nextInt();
+        int base = ler.nextInt();
 
         System.out.print("Digite o segundo número: ");
-        int num2 = ler.nextInt();
+        int expoente = ler.nextInt();
 
-        System.out.println("Números compreendidos entre " + num1 + " e " + num2);
-        for (int i=num1+1; i<num2; i++) {
-            System.out.print(i + " ");
+        for (int i=1; i<=expoente; i++) {
+            resultado *= base;
         }
+
+        System.out.println("O resultado da exponenciação é " + resultado);
 
         ler.close();
     }
