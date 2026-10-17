@@ -1,0 +1,21 @@
+package listaoperadores;
+
+import java.util.Scanner;
+
+public class ConversorFarenheit {
+    
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner(System.in);
+        
+        System.out.print("Digite uma temperatura em graus Farenheit: ");
+        double farenheit = ler.nextDouble();
+        
+        double celsius = 5 * (farenheit - 32) / 9;
+        
+        System.out.println("Convertento para graus Celsius fica " + celsius);
+
+        ler.close();
+    }
+    
+}
