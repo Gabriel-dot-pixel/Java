@@ -21,8 +21,6 @@ public class MatrizAleatoria2 {
         
         int maiorLinha5 = matriz[5][0];
         int menorLinha5 = matriz[5][0];
-        int maiorColuna7 = matriz[0][7];
-        int menorColuna7 = matriz[0][7];
         
         for (int j=0; j<matriz[5].length; j++) {
             if (matriz[5][j] > maiorLinha5) {
@@ -32,6 +30,11 @@ public class MatrizAleatoria2 {
             }
         }
         
+        System.out.println("O maior numero da linha 5 e " + maiorLinha5 + " e o menor numero e " + menorLinha5);
+        
+        int maiorColuna7 = matriz[0][7];
+        int menorColuna7 = matriz[0][7];
+        
         for (int i=0; i<matriz.length; i++) {
             if (matriz[i][7] > maiorColuna7) {
                 maiorColuna7 = matriz[i][7];
@@ -40,7 +43,6 @@ public class MatrizAleatoria2 {
             }
         }
         
-        System.out.println("O maior numero da linha 5 e " + maiorLinha5 + " e o menor numero e " + menorLinha5);
         System.out.println("O maior numero da coluna 7 e " + maiorColuna7 + " e o menor numero e " + menorColuna7);
     }
 }
