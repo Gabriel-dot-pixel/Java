@@ -75,19 +75,19 @@ public class Calendario {
                     System.out.print("Digite o dia do compromisso: ");
                     dia = ler.nextInt();
                     
-                    if (dia < 1 || dia > 31) {
+                    if (dia < 1 || dia > 30) {
                         System.out.println("Valor invalido!");
                     }
-                } while (dia < 1 || dia > 31);
+                } while (dia < 1 || dia > 30);
                 
                 do {
                     System.out.print("Digite o horario do compromisso: ");
                     hora = ler.nextInt();
                     
-                    if (hora < 0 || hora > 23) {
+                    if (hora < 0 || hora > 8) {
                         System.out.println("Valor invalido!");
                     }
-                } while (hora < 0 || hora > 23);
+                } while (hora < 0 || hora > 8);
                 
                 if (calendario[mes-1][dia-1][hora] != null) {
                     System.out.println("Compromisso: " + calendario[mes-1][dia-1][hora]);

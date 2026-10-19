@@ -15,7 +15,7 @@ public class MatrizParImpar {
         
         for (int i=0; i<matriz.length; i++) {
             for (int j=0; j<matriz[i].length; j++) {
-                System.out.print("Digite o elemento na matriz[" + i + "][" + j + "]: ");
+                System.out.print("Digite o elemento na matriz[" + i + "][" + j +"]: ");
                 matriz[i][j] = ler.nextInt();
                 
                 if (matriz[i][j] % 2 == 0) {
