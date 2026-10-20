@@ -2,8 +2,9 @@ package listaorientacaoobjeto;
 
 public class ContaCorrente {
 
-    int numero;
+    String numero;
+    String agencia;
     double saldo;
-    boolean status;
-    double limite;
+    boolean especial;
+    double limiteEspecial;
 }

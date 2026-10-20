@@ -6,6 +6,7 @@ public class LivroDeLivraria {
     String autor;
     int qtdePaginas;
     String tema;
+    int anoLancamento;
+    String isbn;
     double preco;
-    String edicao;
 }

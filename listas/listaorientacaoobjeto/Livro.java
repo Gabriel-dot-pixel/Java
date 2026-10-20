@@ -6,4 +6,6 @@ public class Livro {
     String autor;
     int qtdePaginas;
     String tema;
+    int anoLancamento;
+    String isbn;
 }

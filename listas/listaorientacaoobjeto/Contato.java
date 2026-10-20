@@ -3,7 +3,7 @@ package listaorientacaoobjeto;
 public class Contato {
 
     String nome;
-    String telefone;
+    String[] telefones;
     String email;
-    String grupo;
+    String endereco;
 }
