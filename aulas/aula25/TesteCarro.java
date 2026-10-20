@@ -19,12 +19,5 @@ public class TesteCarro {
         System.out.println(van.modelo);
         
         van.exibirAutonomia();
-        
-        System.out.print("Digite quantos km o carro vai rodar: ");
-        double km = ler.nextDouble();
-        
-        double combustivel = van.calcularCombustivel(km);
-        
-        System.out.println("Voce vai precisar de " + combustivel + "l de combustivel para rodar essa distancia");
     }
 }
