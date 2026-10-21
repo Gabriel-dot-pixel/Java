@@ -9,10 +9,12 @@ public class TesteContaCorrente {
         conta.agencia = "1234";
         conta.especial = true;
         conta.limiteEspecial = 500;
+        conta.valorEspecialUsado = 0;
         conta.saldo = -10;
         
         System.out.println("Saldo da conta " + conta.numero + " = " + conta.saldo);
         
+        System.out.println("Saque de R$100,00");
         boolean saque = conta.sacar(100);
         
         if (saque) {
@@ -22,6 +24,7 @@ public class TesteContaCorrente {
             System.out.println("O saque nao pode ser efetuado");
         }
         
+        System.out.println("Tentativa de saque de R$500,00");
         saque = conta.sacar(500);
         
         if (saque) {

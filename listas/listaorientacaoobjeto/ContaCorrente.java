@@ -7,15 +7,17 @@ public class ContaCorrente {
     double saldo;
     boolean especial;
     double limiteEspecial;
+    double valorEspecialUsado;
     
     boolean sacar(double valor) {
-        if (valor <= saldo) {
+        if (valor <= saldo && saldo > 0) {
             saldo -= valor;
             return true;
         } else {
             if (especial) {
-                if (valor <= limiteEspecial + saldo) {
+                if (valor <= limiteEspecial + saldo && valorEspecialUsado < limiteEspecial) {
                     saldo -= valor;
+                    valorEspecialUsado += valor;
                     return true;
                 }
                 return false;
@@ -33,6 +35,6 @@ public class ContaCorrente {
     }
     
     boolean verificarCheque() {
-        return especial;
+        return saldo < 0;
     }
 }

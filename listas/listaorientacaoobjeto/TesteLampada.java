@@ -18,6 +18,15 @@ public class TesteLampada {
         lampada.tipos[1] = "Lampeoes";
         
         lampada.ligar();
+        
+        lampada.exibirEstado();
+        
         lampada.desligar();
+        
+        lampada.exibirEstado();
+        
+        lampada.mudarEstado();
+        
+        lampada.exibirEstado();
     }
 }
