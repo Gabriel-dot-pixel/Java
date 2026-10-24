@@ -4,24 +4,16 @@ public class TesteLampada {
 
     public static void main(String[] args) {
         
-        Lampada lampada = new Lampada();
-        lampada.modelo = "A60";
-        lampada.tensao = "Bivolt";
-        lampada.garantiaMeses = 36;
-        lampada.potencia = 7;
-        lampada.cor = "Amarela";
-        lampada.tipoLuz = "Amarela";
-        lampada.tipoAbajur = true;
+        Lampada lampada = new Lampada("A60", "Bivolt", 36, "Amarela", "Amarela", 7, true, true);
         
-        lampada.tipos = new String[5];
-        lampada.tipos[0] = "Abajur";
-        lampada.tipos[1] = "Lampeoes";
+        lampada.getTipos()[0] = "Abajur";
+        lampada.getTipos()[1] = "Lampeoes";
         
-        lampada.ligar();
+        lampada.mudarEstado();
         
         lampada.exibirEstado();
         
-        lampada.desligar();
+        lampada.mudarEstado();
         
         lampada.exibirEstado();
         

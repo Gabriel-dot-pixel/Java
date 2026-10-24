@@ -2,16 +2,24 @@ package listaorientacaoobjeto;
 
 public class JogoDaVelha {
 
-    String[][] tabuleiro = new String[3][3];
-    String sinal;
-    int rodada;
-    boolean finalizado;
+    private String[][] tabuleiro = new String[3][3];
+    private String sinal;
+    private int rodada;
+    private boolean finalizado;
 
-    void montarTabuleiro() {
-        sinal = "X";
-        rodada = 0;
-        finalizado = false;
+    public JogoDaVelha() {
+        this.sinal = "X";
+        this.rodada = 0;
+        this.finalizado = false;
+    }
 
+    public JogoDaVelha(String sinal, int rodada, boolean finalizado) {
+        this.sinal = sinal;
+        this.rodada = rodada;
+        this.finalizado = finalizado;
+    }
+
+    public void montarTabuleiro() {
         for (int i = 0; i < tabuleiro.length; i++) {
             for (int j = 0; j < tabuleiro[i].length; j++) {
                 tabuleiro[i][j] = " ";
@@ -19,7 +27,7 @@ public class JogoDaVelha {
         }
     }
 
-    void exibirTabuleiro() {
+    public void exibirTabuleiro() {
         for (int i = 0; i < tabuleiro.length; i++) {
             for (int j = 0; j < tabuleiro[i].length; j++) {
                 if (j < 2) {
@@ -36,7 +44,7 @@ public class JogoDaVelha {
         }
     }
 
-    boolean realizarJogada(int linha, int coluna) {
+    public boolean realizarJogada(int linha, int coluna) {
         if (linha > 0 && coluna > 0) {
             if (linha <= tabuleiro.length && coluna <= tabuleiro[linha-1].length) {
                 if (tabuleiro[linha-1][coluna-1].equals(" ")) {
@@ -51,17 +59,17 @@ public class JogoDaVelha {
         return false;
     }
 
-    void trocarSinal() {
+    public void trocarSinal() {
         if (sinal.equals("X")) {
-            sinal = "O";
+            setSinal("O");
             rodada++;
         } else {
-            sinal = "X";
+            setSinal("X");
             rodada++;
         }
     }
 
-    boolean vitoriaLinha() {
+    public boolean vitoriaLinha() {
         for (int i = 0; i < tabuleiro.length; i++) {
             if (!tabuleiro[i][0].equals(" ") && tabuleiro[i][0].equals(tabuleiro[i][1])
                     && tabuleiro[i][1].equals(tabuleiro[i][2])) {
@@ -72,7 +80,7 @@ public class JogoDaVelha {
         return false;
     }
 
-    boolean vitoriaColuna() {
+    public boolean vitoriaColuna() {
         for (int i = 0; i < tabuleiro[0].length; i++) {
             if (!tabuleiro[0][i].equals(" ") && tabuleiro[0][i].equals(tabuleiro[1][i])
                     && tabuleiro[1][i].equals(tabuleiro[2][i])) {
@@ -83,7 +91,7 @@ public class JogoDaVelha {
         return false;
     }
 
-    boolean vitoriaDiagonal() {
+    public boolean vitoriaDiagonal() {
         if (!tabuleiro[0][0].equals(" ") && tabuleiro[0][0].equals(tabuleiro[1][1])
                 && tabuleiro[1][1].equals(tabuleiro[2][2])) {
             return true;
@@ -97,7 +105,7 @@ public class JogoDaVelha {
         return false;
     }
 
-    boolean verificarVitoria() {
+    public boolean verificarVitoria() {
         if (vitoriaLinha() || vitoriaColuna() || vitoriaDiagonal()) {
             return true;
         }
@@ -105,7 +113,7 @@ public class JogoDaVelha {
         return false;
     }
 
-    boolean verificarEmpate() {
+    public boolean verificarEmpate() {
         if (!verificarVitoria() && rodada == 9) {
             System.out.println("Empate!");
             return true;
@@ -114,13 +122,45 @@ public class JogoDaVelha {
         return false;
     }
     
-    boolean finalizarPartida() {
+    public boolean finalizarPartida() {
         if (verificarVitoria() || verificarEmpate()) {
-            finalizado = true;
+            setFinalizado(true);
             return finalizado;
         }
         
-        finalizado = false;
+        setFinalizado(false);
         return finalizado;
+    }
+
+    public String[][] getTabuleiro() {
+        return tabuleiro;
+    }
+
+    public void setTabuleiro(String[][] tabuleiro) {
+        this.tabuleiro = tabuleiro;
+    }
+
+    public String getSinal() {
+        return sinal;
+    }
+
+    public void setSinal(String sinal) {
+        this.sinal = sinal;
+    }
+
+    public int getRodada() {
+        return rodada;
+    }
+
+    public void setRodada(int rodada) {
+        this.rodada = rodada;
+    }
+
+    public boolean isFinalizado() {
+        return finalizado;
+    }
+
+    public void setFinalizado(boolean finalizado) {
+        this.finalizado = finalizado;
     }
 }

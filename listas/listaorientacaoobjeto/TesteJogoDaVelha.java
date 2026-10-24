@@ -18,10 +18,10 @@ public class TesteJogoDaVelha {
         jogo.montarTabuleiro();
         jogo.exibirTabuleiro();
         
-        while (!jogo.finalizado) {
-            System.out.println("Rodada " + (jogo.rodada+1));
+        while (!jogo.isFinalizado()) {
+            System.out.println("Rodada " + (jogo.getRodada()+1));
             
-            if (jogo.rodada % 2 == 0) {
+            if (jogo.getRodada() % 2 == 0) {
                 System.out.println("Vez do jogador 1");
             } else {
                 System.out.println("Vez do jogador 2");
@@ -40,7 +40,7 @@ public class TesteJogoDaVelha {
                     jogo.exibirTabuleiro();
                     if (jogo.finalizarPartida()) {
                         if (jogo.verificarVitoria()) {
-                            if (jogo.rodada % 2 == 0) {
+                            if (jogo.getRodada() % 2 == 0) {
                                 System.out.println("Vitoria do jogador 1");
                             } else {
                                 System.out.println("Vitoria do jogador 2");
