@@ -20,42 +20,49 @@ public class ContaCorrente {
         this.limiteEspecial = limiteEspecial;
         this.valorEspecialUsado = valorEspecialUsado;
     }
-    
+
     public boolean sacar(double valor) {
         if (valor <= saldo && saldo > 0) {
             debitarValor(valor);
             return true;
         } else {
-            if (especial) {
-                if (valor <= limiteEspecial + saldo && valorEspecialUsado < limiteEspecial) {
-                    debitarValor(valor);
-                    aumentarUsoEspecial(valor);
-                    return true;
-                }
-                return false;
+            if (verificarCheque(valor)) {
+                return true;
             }
             return false;
         }
     }
-    
+
     private void debitarValor(double valor) {
         saldo -= valor;
     }
-    
+
     private void aumentarUsoEspecial(double valor) {
         valorEspecialUsado += valor;
     }
-    
+
     public void depositar(double valor) {
         saldo += valor;
     }
-    
-    public double consultarSaldo() {
-        return saldo;
+
+    public void consultarSaldo() {
+        System.out.println("Saldo atual na conta " + numero + ": R$" + saldo);
     }
-    
+
     public boolean verificarCheque() {
         return saldo < 0;
+    }
+    
+    private boolean verificarCheque(double valor) {
+        if (especial) {
+            if (valor <= limiteEspecial + saldo && valorEspecialUsado < limiteEspecial) {
+                debitarValor(valor);
+                aumentarUsoEspecial(valor);
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
 
     public String getNumero() {

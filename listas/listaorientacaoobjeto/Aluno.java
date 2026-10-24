@@ -9,6 +9,11 @@ public class Aluno {
     private String nomeCurso;
     private String[] disciplinas;
     private double[][] notasDisciplinas;
+    
+    public Aluno() {
+        this.disciplinas = new String[3];
+        this.notasDisciplinas = new double[3][4];
+    }
 
     public Aluno(String nome, String matricula, String nomeCurso) {
         this.nome = nome;
@@ -17,40 +22,35 @@ public class Aluno {
         this.disciplinas = new String[3];
         this.notasDisciplinas = new double[3][4];
     }
-
-    public Aluno() {
-    }
     
     public void lerAluno() {
         Scanner ler = new Scanner(System.in);
         
         System.out.print("Digite o nome do aluno: ");
-        nome = ler.nextLine();
+        this.nome = ler.nextLine();
 
         System.out.print("Digite a matircula do aluno: ");
-        matricula = ler.nextLine();
+        this.matricula = ler.nextLine();
 
         System.out.print("Digite o nome do curso do aluno: ");
-        nomeCurso = ler.nextLine();
+        this.nomeCurso = ler.nextLine();
 
         for (int i = 0; i < disciplinas.length; i++) {
             System.out.print("Digite o nome da disciplina " + (i + 1) + ": ");
-            disciplinas[i] = ler.nextLine();
+            this.disciplinas[i] = ler.nextLine();
         }
 
         for (int i = 0; i < notasDisciplinas.length; i++) {
             System.out.println("Notas da disciplina " + disciplinas[i]);
             for (int j = 0; j < notasDisciplinas[i].length; j++) {
                 System.out.print("Digite a nota " + (j + 1) + ": ");
-                notasDisciplinas[i][j] = ler.nextDouble();
+                this.notasDisciplinas[i][j] = ler.nextDouble();
             }
         }
     }
 
     public void exibirInfo() {
-        System.out.println("Nome: " + nome);
-        System.out.println("Matricula: " + matricula);
-        System.out.println("Curso: " + nomeCurso);
+        toString();
 
         for (int i = 0; i < notasDisciplinas.length; i++) {
             System.out.println("Notas da disciplina " + disciplinas[i]);
@@ -69,15 +69,20 @@ public class Aluno {
         return false;
     }
     
-    public double calcularMedia(int pos) {
+    private double calcularMedia(int pos) {
+        double soma = somarNotas(pos);
+        double media = soma / 4;
+            
+        return media;
+    }
+    
+    private double somarNotas(int pos) {
         double soma = 0;
-        double media;
         for (int i = 0; i < notasDisciplinas[pos].length; i++) {
             soma += notasDisciplinas[pos][i];
         }
-       media = soma / 4;
-            
-        return media;
+        
+        return soma;
     }
 
     public String getNome() {
@@ -118,5 +123,12 @@ public class Aluno {
 
     public void setNotasDisciplinas(double[][] notasDisciplinas) {
         this.notasDisciplinas = notasDisciplinas;
+    }
+    
+    @Override
+    public String toString() {
+        return "Nome: " + this.nome + 
+               "Matricula: " + this.matricula + 
+               "Curso: " + this.nomeCurso;
     }
 }
