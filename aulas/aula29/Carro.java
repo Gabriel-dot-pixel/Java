@@ -9,14 +9,10 @@ public class Carro {
     double consumoCombustivel;
     
     Carro() {
-        System.out.println("A classe carro foi instanciada");
+        System.out.println("Classe carro foi instanciada");
         numPassageiros = 4;
     }
     
-    Carro(String marca_) {
-        marca = marca_;
-    }
-
     Carro(String marca_, String modelo_, int numPassageiros_, double capCombustivel_, double consumoCombustivel_) {
         marca = marca_;
         modelo = modelo_;
@@ -25,20 +21,19 @@ public class Carro {
         consumoCombustivel = consumoCombustivel_;
     }
     
-    
-    
     void exibirAutonomia() {
-        double autonomia = obterAutonomia();
-//        System.out.println("A autonomia do carro e: " + (capCombustivel*consumoCombustivel) + "km/l");
-        System.out.println("A autonomia do carro e: " + autonomia + "km/l");
+        System.out.println("A autonomia do carro e: " + (capCombustivel*consumoCombustivel) + "km/l");
     }
     
     double obterAutonomia() {
+        System.out.println("Metodo obterAutonomia() foi chamado.");
+        
         return capCombustivel * consumoCombustivel;
     }
     
     double calcularCombustivel(double km) {
-        double autonomia = obterAutonomia();
-        return km/autonomia;
+        double qtdeCombustivel = km / consumoCombustivel;
+        
+        return qtdeCombustivel;
     }
 }
