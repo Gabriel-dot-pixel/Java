@@ -50,7 +50,8 @@ public class Aluno {
     }
 
     public void exibirInfo() {
-        toString();
+        String informacoes = toString();
+        System.out.println(informacoes);
 
         for (int i = 0; i < notasDisciplinas.length; i++) {
             System.out.println("Notas da disciplina " + disciplinas[i]);
@@ -127,8 +128,8 @@ public class Aluno {
     
     @Override
     public String toString() {
-        return "Nome: " + this.nome + 
-               "Matricula: " + this.matricula + 
-               "Curso: " + this.nomeCurso;
+        return "Nome: " + this.nome + "\n"
+               + "Matricula: " + this.matricula + "\n" 
+               + "Curso: " + this.nomeCurso;
     }
 }
