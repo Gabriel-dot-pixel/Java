@@ -3,7 +3,7 @@ package aula37;
 public class Aluno extends Pessoa {
 
     private String curso;
-    private double[][] notas;
+    private double[] notas;
     
     public double calcularMedia() {
         return 0;
@@ -13,19 +13,19 @@ public class Aluno extends Pessoa {
         return true;
     }
 
-    public String getCursos() {
+    public String getCurso() {
         return curso;
     }
 
-    public void setCursos(String curso) {
+    public void setCurso(String curso) {
         this.curso = curso;
     }
 
-    public double[][] getNotas() {
+    public double[] getNotas() {
         return notas;
     }
 
-    public void setNotas(double[][] notas) {
+    public void setNotas(double[] notas) {
         this.notas = notas;
     }
 }
