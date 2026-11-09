@@ -1,10 +1,11 @@
 package listaheranca;
 
-public class Mamifero extends Animal{
+public class Mamifero extends Animal {
 
     private String alimento;
 
     public Mamifero() {
+        super.setAmbiente("Terra");
     }
 
     public Mamifero(String alimento, String nome, double comprimento, int patas, String cor, String ambiente, double velocidade) {

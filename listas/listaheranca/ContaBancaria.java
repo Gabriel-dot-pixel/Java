@@ -55,6 +55,6 @@ public class ContaBancaria {
     public String toString() {
         return "Nome do Cliente: " + this.nomeCliente + "\n"
                + "Numero da Conta: " + this.numConta + "\n"
-               + "Saldo: " + this.saldo;
+               + "Saldo: R$" + this.saldo;
     }
 }

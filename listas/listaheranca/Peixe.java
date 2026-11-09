@@ -1,10 +1,14 @@
 package listaheranca;
 
-public class Peixe extends Animal{
+public class Peixe extends Animal {
 
     private String caracteristicas;
 
     public Peixe() {
+        super.setPatas(0);
+        super.setAmbiente("Mar");
+        super.setCor("Cinzento");
+        this.caracteristicas = "Barbatanas e cauda";
     }
 
     public Peixe(String caracteristicas, String nome, double comprimento, int patas, String cor, String ambiente, double velocidade) {

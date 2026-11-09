@@ -6,7 +6,6 @@ public class TesteContaBancaria {
 
     public static void main(String[] args) {
         
-        Scanner ler = new Scanner(System.in);
         ContaPoupanca cp = new ContaPoupanca(30, "Jose", "12345", 5000);
         ContaEspecial ce = new ContaEspecial(500, "Luisa", "67890", 1000);
         
@@ -22,11 +21,11 @@ public class TesteContaBancaria {
         
         System.out.println("Saldo na conta poupanca: R$ " + cp.getSaldo());
         
-        System.out.println("Tentativa de saque de R$1600 da conta especial");
-        saque = ce.sacar(1600);
+        System.out.println("Saque de R$1200 da conta especial");
+        saque = ce.sacar(1200);
         
-        if (!saque) {
-            System.out.println("Tentativa de saque negada!");
+        if (saque) {
+            System.out.println("Saque realizado com sucesso!");
         }
         
         System.out.println("Deposito de R$1000 nas contas poupanca e especial");

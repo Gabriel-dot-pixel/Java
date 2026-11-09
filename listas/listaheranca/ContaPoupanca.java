@@ -5,7 +5,6 @@ public class ContaPoupanca extends ContaBancaria{
     private int diaRendimento;
 
     public ContaPoupanca() {
-        super();
     }
 
     public ContaPoupanca(int diaRendimento, String nomeCliente, String numConta, double saldo) {

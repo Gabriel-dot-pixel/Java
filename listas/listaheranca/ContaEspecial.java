@@ -17,11 +17,13 @@ public class ContaEspecial extends ContaBancaria{
         double saldo = super.getSaldo();
         
         if (valor <= saldo && saldo > 0) {
-            super.sacar(valor);
+            saldo -= valor;
+            super.setSaldo(saldo);
             return true;
         } else {
             if (valor <= saldo + limite) {
-                super.sacar(valor);
+                saldo -= valor;
+                super.setSaldo(saldo);
                 return true;
             }
             return false;
@@ -40,6 +42,6 @@ public class ContaEspecial extends ContaBancaria{
     public String toString() {
         return "Conta Especial: " + "\n"
                + super.toString() + "\n"
-               + "Limite: " + this.limite;
+               + "Limite: R$" + this.limite;
     }
 }

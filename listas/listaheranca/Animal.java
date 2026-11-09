@@ -10,6 +10,7 @@ public class Animal {
     private double velocidade;
 
     public Animal() {
+        this.patas = 4;
     }
 
     public Animal(String nome, double comprimento, int patas, String cor, String ambiente, double velocidade) {
